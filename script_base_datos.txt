@@ -1,0 +1,99 @@
+CREATE DATABASE IF NOT EXISTS novedades_misjhon;
+USE novedades_misjhon;
+
+DROP TABLE IF EXISTS compras;
+CREATE TABLE compras (
+  id bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+  nombre varchar(255) NOT NULL,
+  apellido varchar(255) NOT NULL,
+  email varchar(255) NOT NULL,
+  telefono varchar(255) NOT NULL,
+  direccion varchar(255) NOT NULL,
+  region varchar(255) NOT NULL,
+  metodo_pago varchar(255) NOT NULL,
+  created_at timestamp NULL DEFAULT NULL,
+  updated_at timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (id)
+);
+
+DROP TABLE IF EXISTS productos;
+CREATE TABLE productos (
+  id bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+  titulo varchar(255) NOT NULL,
+  precio decimal(8,2) NOT NULL,
+  imagen varchar(255) NOT NULL,
+  categoria enum('arreglos','peluches','juguetes','ropa_bebe') NOT NULL,
+  created_at timestamp NULL DEFAULT NULL,
+  updated_at timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (id)
+);
+
+INSERT INTO productos (id, titulo, precio, imagen, categoria, created_at, updated_at) VALUES
+(1, 'Arreglo de rosas eternas con osito cariñosito', 38.00, 'imagenes/i__arreglos/A1.png', 'arreglos', '2026-05-17 22:21:56', '2026-05-17 22:21:56'),
+(2, 'Arreglo de rosas eternas con peluche Angela', 28.00, 'imagenes/i__arreglos/A2.png', 'arreglos', '2026-05-17 22:21:56', '2026-05-17 22:21:56'),
+(3, 'Rosa eterna con frase Feliz Cumple', 8.00, 'imagenes/i__arreglos/A3.png', 'arreglos', '2026-05-17 22:21:56', '2026-05-17 22:21:56'),
+(4, 'Rosa eterna rosado pastel', 7.00, 'imagenes/i__arreglos/A4.png', 'arreglos', '2026-05-17 22:21:56', '2026-05-17 22:21:56'),
+(5, 'Rosa eterna azul', 6.00, 'imagenes/i__arreglos/A5.png', 'arreglos', '2026-05-17 22:21:56', '2026-05-17 22:21:56'),
+(6, 'Girasol con frase Feliz Cumple', 9.00, 'imagenes/i__arreglos/A6.png', 'arreglos', '2026-05-17 22:21:56', '2026-05-17 22:21:56'),
+(7, 'Arreglo de rosas eternas con mariposas', 25.00, 'imagenes/i__arreglos/A7.png', 'arreglos', '2026-05-17 22:21:56', '2026-05-17 22:21:56'),
+(8, 'Arreglo con 19 rosas eternas, con frase y corona', 78.00, 'imagenes/i__arreglos/A8.png', 'arreglos', '2026-05-17 22:21:56', '2026-05-17 22:21:56'),
+(9, 'Arreglo de rosas eternas con flores blancas', 24.00, 'imagenes/i__arreglos/A9.png', 'arreglos', '2026-05-17 22:21:56', '2026-05-17 22:21:56'),
+(10, 'Arreglo de rosas blancas y rosas con coronita', 75.00, 'imagenes/i__arreglos/A10.png', 'arreglos', '2026-05-17 22:21:56', '2026-05-17 22:21:56'),
+(11, 'Arreglo con corazón fuego, frase Feliz cumpleaños', 46.00, 'imagenes/i__arreglos/A11.png', 'arreglos', '2026-05-17 22:21:56', '2026-05-17 22:21:56'),
+(12, 'Graduado con tulipanes', 49.00, 'imagenes/i__arreglos/A12.png', 'arreglos', '2026-05-17 22:21:56', '2026-05-17 22:21:56'),
+(13, 'Ramo con carrito HotWheel', 27.00, 'imagenes/i__arreglos/A13.png', 'arreglos', '2026-05-17 22:21:56', '2026-05-17 22:21:56'),
+(14, 'Stich importado, con rosas eternas', 55.00, 'imagenes/i__arreglos/A14.png', 'arreglos', '2026-05-17 22:21:56', '2026-05-17 22:21:56'),
+(15, 'Girasoles eternos', 17.00, 'imagenes/i__arreglos/A15.png', 'arreglos', '2026-05-17 22:21:56', '2026-05-17 22:21:56'),
+(16, 'Arreglo de rosas eternas rojas con osito', 57.50, 'imagenes/i__arreglos/A16.png', 'arreglos', '2026-05-17 22:21:56', '2026-05-17 22:21:56'),
+(17, 'Girasol más tulipanes', 22.00, 'imagenes/i__arreglos/A17.png', 'arreglos', '2026-05-17 22:21:56', '2026-05-17 22:21:56'),
+(18, 'Arreglo de rosas eternas amarillas con osito blanco', 47.00, 'imagenes/i__arreglos/A18.png', 'arreglos', '2026-05-17 22:21:56', '2026-05-17 22:21:56'),
+(19, 'Arreglo de tulipanes rosas con golosinas y peluche', 73.50, 'imagenes/i__arreglos/A19.png', 'arreglos', '2026-05-17 22:21:56', '2026-05-17 22:21:56'),
+(20, 'Arreglo de osito minero con rosas eternas azules', 68.50, 'imagenes/i__arreglos/A20.png', 'arreglos', '2026-05-17 22:21:56', '2026-05-17 22:21:56'),
+(21, 'Arreglo de rosas azules con peluche de pinguino', 46.00, 'imagenes/i__arreglos/A21.png', 'arreglos', '2026-05-17 22:21:56', '2026-05-17 22:21:56'),
+(22, 'Excavadora de Juguete', 20.00, 'imagenes/i__juguetes/J1.jpg', 'juguetes', '2026-05-17 22:21:56', '2026-05-17 22:21:56'),
+(23, 'Sonaja 8 unidades (animalitos)', 16.00, 'imagenes/i__juguetes/J2.jpg', 'juguetes', '2026-05-17 22:21:56', '2026-05-17 22:21:56'),
+(24, 'Set de Maquinaria pesada', 20.00, 'imagenes/i__juguetes/J3.jpg', 'juguetes', '2026-05-17 22:21:56', '2026-05-17 22:21:56'),
+(25, 'Excavadora y Camión', 29.00, 'imagenes/i__juguetes/J4.jpg', 'juguetes', '2026-05-17 22:21:56', '2026-05-17 22:21:56'),
+(26, 'Carrito feliz ABC123', 20.00, 'imagenes/i__juguetes/J5.jpg', 'juguetes', '2026-05-17 22:21:56', '2026-05-17 22:21:56'),
+(27, 'Set de alimentos con pega-pega', 12.00, 'imagenes/i__juguetes/J6.jpg', 'juguetes', '2026-05-17 22:21:56', '2026-05-17 22:21:56'),
+(28, 'Set de cocina 3 en 1', 150.00, 'imagenes/i__juguetes/J7.jpg', 'juguetes', '2026-05-17 22:21:56', '2026-05-17 22:21:56'),
+(29, 'Cono de Aros apilables', 15.00, 'imagenes/i__juguetes/J8.jpg', 'juguetes', '2026-05-17 22:21:56', '2026-05-17 22:21:56'),
+(30, 'Carro a control remoto rojo', 55.00, 'imagenes/i__juguetes/J9.jpg', 'juguetes', '2026-05-17 22:21:56', '2026-05-17 22:21:56'),
+(31, 'Osito con corazón Te quiero', 27.00, 'imagenes/i__peluches/P1.png', 'peluches', '2026-05-17 22:21:56', '2026-05-17 22:21:56'),
+(32, 'Pinguino antialergico con gorro y mochila', 22.00, 'imagenes/i__peluches/P2.png', 'peluches', '2026-05-17 22:21:56', '2026-05-17 22:21:56'),
+(33, 'Osito musical con corazon Love You', 23.00, 'imagenes/i__peluches/P3.png', 'peluches', '2026-05-17 22:21:56', '2026-05-17 22:21:56'),
+(34, 'Osito con corbatin celeste', 23.00, 'imagenes/i__peluches/P4.png', 'peluches', '2026-05-17 22:21:56', '2026-05-17 22:21:56'),
+(35, 'Peluche de Lopso dormido', 27.00, 'imagenes/i__peluches/P5.png', 'peluches', '2026-05-17 22:21:56', '2026-05-17 22:21:56'),
+(36, 'Erizo peluche antialergico', 26.00, 'imagenes/i__peluches/P6.png', 'peluches', '2026-05-17 22:21:56', '2026-05-17 22:21:56'),
+(37, 'Conjunto de algodón rojo (niño)', 55.00, 'imagenes/i__ropaBebes/B1.jpg', 'ropa_bebe', '2026-05-17 22:21:56', '2026-05-17 22:21:56'),
+(38, 'Conjunto de algodón rosa (niña)', 45.00, 'imagenes/i__ropaBebes/B2.jpg', 'ropa_bebe', '2026-05-17 22:21:56', '2026-05-17 22:21:56'),
+(39, 'Trajecito de algodon rojo (niño)', 55.00, 'imagenes/i__ropaBebes/B3.jpg', 'ropa_bebe', '2026-05-17 22:21:56', '2026-05-17 22:21:56'),
+(40, 'Conjunto de algodón con diseño de rosas', 54.00, 'imagenes/i__ropaBebes/B4.jpg', 'ropa_bebe', '2026-05-17 22:21:56', '2026-05-17 22:21:56'),
+(41, 'Conjunto de algodón celeste y gris (niño)', 58.00, 'imagenes/i__ropaBebes/B5.jpg', 'ropa_bebe', '2026-05-17 22:21:56', '2026-05-17 22:21:56'),
+(42, 'Conjunto para niño diseño de dinosaurios', 67.00, 'imagenes/i__ropaBebes/B6.jpg', 'ropa_bebe', '2026-05-17 22:21:56', '2026-05-17 22:21:56'),
+(43, 'Conjunto forrado marrón (niño)', 55.00, 'imagenes/i__ropaBebes/B7.jpg', 'ropa_bebe', '2026-05-17 22:21:56', '2026-05-17 22:21:56'),
+(44, 'Conjunto de 5 piezas kitty', 67.00, 'imagenes/i__ropaBebes/B8.jpg', 'ropa_bebe', '2026-05-17 22:21:56', '2026-05-17 22:21:56'),
+(45, 'Vestido de algodon rojo y blanco', 42.00, 'imagenes/i__ropaBebes/B9.jpg', 'ropa_bebe', '2026-05-17 22:21:56', '2026-05-17 22:21:56');
+
+DROP TABLE IF EXISTS users;
+CREATE TABLE users (
+  id bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+  name varchar(255) NOT NULL,
+  email varchar(255) NOT NULL,
+  telefono varchar(255) DEFAULT NULL,
+  direccion varchar(255) DEFAULT NULL,
+  region varchar(255) DEFAULT NULL,
+  email_verified_at timestamp NULL DEFAULT NULL,
+  password varchar(255) NOT NULL,
+  role enum('admin','user') NOT NULL DEFAULT 'user',
+  remember_token varchar(100) DEFAULT NULL,
+  created_at timestamp NULL DEFAULT NULL,
+  updated_at timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (id),
+  UNIQUE KEY users_email_unique (email)
+);
+
+INSERT INTO users (id, name, email, telefono, direccion, region, email_verified_at, password, role, remember_token, created_at, updated_at) VALUES
+(1, 'admin01', 'admin01@misjhon.com', '123456789', 'Central', 'Lima', NULL, '$2y$12$vnHQnNBkjdYce.ca60hYEuaLGJUjxP7fO3QI7MWY6wCOgAcDMCW.m', 'admin', NULL, '2026-05-17 22:21:57', '2026-05-17 22:21:57'),
+(2, 'admin02', 'admin02@misjhon.com', '123456789', 'Central', 'Lima', NULL, '$2y$12$n7Kvg.EMztfDAu7jTXoO8ucsY24oWtPBfxs/u5czmqiUovpKr.bh.', 'admin', NULL, '2026-05-17 22:21:57', '2026-05-17 22:21:57'),
+(3, 'admin03', 'admin03@misjhon.com', '123456789', 'Central', 'Lima', NULL, '$2y$12$2LjVQXxX3eJZnQLKK43EVOWpok32slSegPeXNDmpbs.QrKlADmc7C', 'admin', NULL, '2026-05-17 22:21:57', '2026-05-17 22:21:57');

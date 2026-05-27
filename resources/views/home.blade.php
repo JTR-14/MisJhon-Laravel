@@ -12,6 +12,12 @@
           "Descubre regalos únicos para cada ocasión. Arreglos de rosas eternas, ropa de bebé, juguetes y peluches de la
           mejor calidad".
         </p>
+
+        <div class="mt-6">
+            <a href="{{ route('integrantes') }}" class="inline-block rounded-md bg-indigo-600 px-6 py-3 text-sm font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-indigo-400 dark:bg-indigo-500 dark:hover:bg-indigo-600">
+                Ver Integrantes del Grupo
+            </a>
+        </div>
       </section>
 
       <ul class="mt-8 grid gap-4 grid-cols-2 lg:grid-cols-4">

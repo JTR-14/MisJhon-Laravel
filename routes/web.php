@@ -15,7 +15,7 @@ Route::get('/peluches', [PageController::class, 'peluches'])->name('peluches');
 Route::get('/ropa-bebes', [PageController::class, 'ropaBebes'])->name('ropaBebes');
 Route::get('/politica-privacidad', [PageController::class, 'politicaPrivacidad'])->name('politicaPrivacidad');
 Route::get('/contacto', [PageController::class, 'contacto'])->name('contacto');
-
+Route::get('/integrantes', [PageController::class, 'integrantes'])->name('integrantes');
 Route::get('/info-arreglos', [PageController::class, 'infoArreglos'])->name('infoArreglos');
 Route::get('/info-juguetes', [PageController::class, 'infoJuguetes'])->name('infoJuguetes');
 Route::get('/info-peluches', [PageController::class, 'infoPeluches'])->name('infoPeluches');

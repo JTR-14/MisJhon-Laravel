@@ -70,4 +70,9 @@ class PageController extends Controller
     {
         return view('pages.infoRopaBebe');
     }
+
+    public function integrantes()
+    {
+        return view('pages.integrantes');
+    }
 }
