@@ -34,13 +34,6 @@ Route::post('/compra', [CompraController::class, 'store']);
 
 Route::resource('productos', ProductoController::class)->middleware(\App\Http\Middleware\IsAdmin::class);
 
-Route::get('/storage/{path}', function (string $path) {
-    \Illuminate\Support\Facades\Log::info("STORAGE ROUTE HIT: " . $path);
-    $file = storage_path('app/public/' . $path);
-    if (file_exists($file)) {
-        return response()->file($file);
-    }
-    abort(404);
-})->where('path', '.*');
+
 
 Route::get('/test', function() { return "OK"; });

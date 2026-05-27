@@ -36,7 +36,7 @@
                 <div>
                     <label for="titulo" class="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">Título del Producto</label>
                     <input type="text" name="titulo" id="titulo" value="{{ old('titulo') }}" required
-                           class="block w-full rounded-2xl border-gray-300 dark:border-gray-600 dark:bg-gray-900/50 focus:border-pink-500 focus:ring-pink-500 transition-colors shadow-sm sm:text-base px-4 py-3"
+                           class="block w-full rounded-2xl border-gray-300 dark:border-gray-600 dark:bg-gray-900/50 dark:text-white focus:border-pink-500 focus:ring-pink-500 transition-colors shadow-sm sm:text-base px-4 py-3"
                            placeholder="Ej: Arreglo de rosas eternas mágico">
                 </div>
 
@@ -49,7 +49,7 @@
                                 <span class="text-gray-500 sm:text-base">S/</span>
                             </div>
                             <input type="number" name="precio" id="precio" value="{{ old('precio') }}" step="0.01" min="0" required
-                                   class="block w-full pl-10 rounded-2xl border-gray-300 dark:border-gray-600 dark:bg-gray-900/50 focus:border-pink-500 focus:ring-pink-500 transition-colors sm:text-base px-4 py-3"
+                                   class="block w-full pl-10 rounded-2xl border-gray-300 dark:border-gray-600 dark:bg-gray-900/50 dark:text-white focus:border-pink-500 focus:ring-pink-500 transition-colors sm:text-base px-4 py-3"
                                    placeholder="0.00">
                         </div>
                     </div>
@@ -58,7 +58,7 @@
                     <div>
                         <label for="categoria" class="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">Categoría</label>
                         <select name="categoria" id="categoria" required
-                                class="block w-full rounded-2xl border-gray-300 dark:border-gray-600 dark:bg-gray-900/50 focus:border-pink-500 focus:ring-pink-500 transition-colors shadow-sm sm:text-base px-4 py-3">
+                                class="block w-full rounded-2xl border-gray-300 dark:border-gray-600 dark:bg-gray-900/50 dark:text-white focus:border-pink-500 focus:ring-pink-500 transition-colors shadow-sm sm:text-base px-4 py-3">
                             <option value="" disabled selected>Selecciona su categoría...</option>
                             <option value="arreglos" {{ old('categoria') == 'arreglos' ? 'selected' : '' }}>Arreglos</option>
                             <option value="peluches" {{ old('categoria') == 'peluches' ? 'selected' : '' }}>Peluches</option>
